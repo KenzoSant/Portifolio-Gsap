@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos — KENZO.S</title>
+    <meta name="description"
+        content="Todos os projetos de Kenzo Santos — desenvolvedor front-end especializado em interfaces premium e animações de alta performance.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Projects Page CSS -->
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">KENZO<span>.S</span></a>
+            <div class="nav-links">
+                <a href="index.html#services" class="nav-link">Serviços</a>
+                <a href="index.html#projects" class="nav-link">Projetos</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#about" class="nav-link">Sobre</a>
+                <a href="index.html#contact" class="nav-btn">Contato</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Page Hero -->
+            <section class="page-hero">
+                <div class="main-container">
+                    <a href="index.html" class="back-link">
+                        <i class="ph ph-arrow-left"></i>
+                        Voltar ao portfólio
+                    </a>
+                    <div class="page-hero-inner">
+                        <div class="page-hero-left">
+                            <p class="section-subtitle">Portfólio Completo</p>
+                            <h1 class="page-title">Todos os<br><span>Projetos</span></h1>
+                        </div>
+                        <div class="page-hero-right">
+                            <p>Uma coleção de trabalhos desenvolvidos com foco em performance, design afiado e
+                                experiências que ficam na memória do usuário.</p>
+                            <div class="projects-count">
+                                <span id="visibleCount">7</span>&nbsp;projetos encontrados
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="main-container">
+                    <div class="filter-bar-inner">
+                        <span class="filter-label">Filtrar:</span>
+                        <button class="filter-btn active" data-filter="all" id="filterAll">Todos</button>
+                        <button class="filter-btn" data-filter="html-css" id="filterHtmlCss">Landing Pages</button>
+                        <button class="filter-btn" data-filter="fullstack" id="filterFullstack">Full-Stack</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <section class="projects-page-section">
+                <div class="main-container">
+                    <div class="projects-grid" id="projectsGrid">
+
+                        <!-- Card 1 — Wide / Featured -->
+                        <article class="pcard pcard--wide pcard--featured" data-category="react fullstack" id="pcard1">
+                            <div class="pcard-image">
+                                <img src="./images/sytudio.png" alt="Sytudio E-commerce">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge accent">Destaque</span>
+                                <a href="https://sytudio.onrender.com/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">React</span>
+                                    <span class="pcard-tag">MongoDB</span>
+                                    <span class="pcard-tag">Node.js</span>
+                                    <span class="pcard-tag">Full-Stack</span>
+                                </div>
+                                <h2 class="pcard-title">Sytudio — E-commerce Premium</h2>
+                                <p class="pcard-desc">Plataforma full-stack de e-commerce com catálogo interativo e
+                                    painel administrativo.
+                                </p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2025</span>
+                                    <a href="https://sytudio.onrender.com/" class="pcard-cta" target="_blank">Ver projeto <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 — Narrow -->
+                        <article class="pcard pcard--narrow" data-category="html-css" id="pcard2">
+                            <div class="pcard-image">
+                                <img src="./images/natal.png" alt="Natal Landing Page">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Landing Page</span>
+                                <a href="https://natalina.vercel.app/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">HTML</span>
+                                    <span class="pcard-tag">CSS</span>
+                                    <span class="pcard-tag">JS</span>
+                                </div>
+                                <h2 class="pcard-title">Natal — E-commerce</h2>
+                                <p class="pcard-desc">Landing page temática com animações, parallax e
+                                    conversão orientada a campanha.</p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2023</span>
+                                    <a href="https://natalina.vercel.app/" class="pcard-cta" target="_blank">Ver projeto <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 — Half -->
+                        <article class="pcard pcard--half" data-category="html-css" id="pcard3">
+                            <div class="pcard-image">
+                                <img src="./images/homed.png" alt="Homed">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Landing Page</span>
+                                <a href="https://homed.vercel.app/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">CSS</span>
+                                    <span class="pcard-tag">JS</span>
+                                    <span class="pcard-tag">UI Design</span>
+                                </div>
+                                <h2 class="pcard-title">Homed — Imóveis</h2>
+                                <p class="pcard-desc">Interface voltada a imobiliárias.</p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2021</span>
+                                    <a href="https://homed.vercel.app/" class="pcard-cta" target="_blank">Ver projeto <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 — Half -->
+                        <article class="pcard pcard--half" data-category="fullstack" id="pcard4">
+                            <div class="pcard-image">
+                                <img src="./images/tokashiki.png" alt="Tokashiki Resort">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Comercial</span>
+                                <a href="https://tgii-food-front.onrender.com/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">React</span>
+                                    <span class="pcard-tag">MongoDB</span>
+                                    <span class="pcard-tag">Node.js</span>
+                                    <span class="pcard-tag">Full-Stack</span>
+                                </div>
+                                <h2 class="pcard-title">Tokashiki — Restaurante</h2>
+                                <p class="pcard-desc">Restaurante com sistema de reservas e cardápio online.</p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2025</span>
+                                    <a href="https://tgii-food-front.onrender.com/" class="pcard-cta" target="_blank">Ver projeto <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 — Third -->
+                        <article class="pcard pcard--third" data-category="html-css" id="pcard5">
+                            <div class="pcard-image">
+                                <img src="./images/travel.png" alt="Projeto Landing">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Landing Page</span>
+                                <a href="#" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">HTML</span>
+                                    <span class="pcard-tag">CSS</span>
+                                </div>
+                                <h2 class="pcard-title">Agência de Viagens</h2>
+                                <p class="pcard-desc">Landing Page voltada a viagens com foco em conversão.
+                                </p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2024</span>
+                                    <a href="travel-gilt-gamma.vercel.app" class="pcard-cta" target="_blank">Ver <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 — Third -->
+                        <article class="pcard pcard--third" data-category="html-css" id="pcard6">
+                            <div class="pcard-image">
+                                <img src="./images/Fatec.png" alt="SaaS App">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Institucional</span>
+                                <a href="https://fatec.vercel.app/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">HTML</span>
+                                    <span class="pcard-tag">CSS</span>
+                                </div>
+                                <h2 class="pcard-title">FATEC</h2>
+                                <p class="pcard-desc">Landing Page Institucional, trabalho acadêmico.</p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2022</span>
+                                    <a href="https://fatec.vercel.app/" class="pcard-cta" target="_blank">Ver <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 7 — Third -->
+                        <article class="pcard pcard--third" data-category="html-css" id="pcard7">
+                            <div class="pcard-image">
+                                <img src="./images/Velha.png" alt="Brand Identity">
+                                <div class="pcard-image-overlay"></div>
+                                <span class="pcard-badge">Jogo</span>
+                                <a href="https://jogo-da-velha-kenzosant.vercel.app/" class="pcard-link-btn" aria-label="Ver projeto">
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="pcard-body">
+                                <div class="pcard-tags">
+                                    <span class="pcard-tag">HTML</span>
+                                    <span class="pcard-tag">CSS</span>
+                                    <span class="pcard-tag">JS</span>
+                                </div>
+                                <h2 class="pcard-title">Jogo da Velha</h2>
+                                <p class="pcard-desc">Jogo da velha, trabalho acadêmico em grupo .</p>
+                                <div class="pcard-footer">
+                                    <span class="pcard-year">2024</span>
+                                    <a href="https://jogo-da-velha-kenzosant.vercel.app/" class="pcard-cta" target="_blank">Ver <i class="ph ph-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Empty State -->
+                        <div class="no-results" id="noResults">
+                            <i class="ph ph-magnifying-glass"></i>
+                            <p>Nenhum projeto encontrado para este filtro.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="main-container">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <a href="index.html" class="logo">KENZO<span>.S</span></a>
+                            <p>Tornando a web incrível,<br>um pixel de cada vez.</p>
+                        </div>
+                        <div class="footer-links">
+                            <div class="link-col">
+                                <h4>Navegação</h4>
+                                <ul>
+                                    <li><a href="index.html#services" class="hover-underline">Serviços</a></li>
+                                    <li><a href="projects.html" class="hover-underline">Projetos</a></li>
+                                    <li><a href="index.html#skills" class="hover-underline">Skills</a></li>
+                                    <li><a href="index.html#about" class="hover-underline">Sobre Mim</a></li>
+                                </ul>
+                            </div>
+                            <div class="link-col">
+                                <h4>Social</h4>
+                                <ul>
+                                    <li><a href="https://github.com/KenzoSant" class="hover-underline"
+                                            target="_blank">GitHub</a></li>
+                                    <li><a href="https://www.linkedin.com/in/mateuskenzo" class="hover-underline"
+                                            target="_blank">LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 KENZO.S. Todos os direitos reservados.</p>
+                        <button class="back-to-top" id="backToTopProjects">
+                            <i class="ph ph-caret-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Scripts CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Lenis smooth scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+            });
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => lenis.raf(time * 1000));
+            gsap.ticker.lagSmoothing(0);
+
+            // ── Custom Cursor ──────────────────────────────────────
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            const cursorX = gsap.quickTo(cursor, 'left', { duration: 0.1, ease: 'power3' });
+            const cursorY = gsap.quickTo(cursor, 'top', { duration: 0.1, ease: 'power3' });
+            const folX = gsap.quickTo(follower, 'left', { duration: 0.4, ease: 'power3' });
+            const folY = gsap.quickTo(follower, 'top', { duration: 0.4, ease: 'power3' });
+
+            window.addEventListener('mousemove', (e) => {
+                cursorX(e.clientX); cursorY(e.clientY);
+                folX(e.clientX); folY(e.clientY);
+            });
+
+            document.querySelectorAll('a, button').forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+
+            // ── Navbar scroll ──────────────────────────────────────
+            ScrollTrigger.create({
+                start: 'top -80px',
+                end: 99999,
+                toggleClass: { className: 'scrolled', targets: '#navbar' }
+            });
+
+            // ── Page hero entrance ─────────────────────────────────
+            const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+            tl.fromTo('.back-link', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 })
+                .fromTo('.section-subtitle', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 }, '-=0.3')
+                .fromTo('.page-title', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, '-=0.4')
+                .fromTo('.page-hero-right', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, '-=0.5')
+                .fromTo('.filter-bar', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 }, '-=0.3');
+
+            // ── Cards entrance on scroll ───────────────────────────
+            const cards = document.querySelectorAll('.pcard');
+            cards.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0, opacity: 1,
+                        duration: 0.75,
+                        ease: 'back.out(1.2)',
+                        delay: (i % 3) * 0.08,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 88%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    }
+                );
+            });
+
+            // ── Filter Logic ───────────────────────────────────────
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const allCards = document.querySelectorAll('.pcard');
+            const countEl = document.getElementById('visibleCount');
+            const noResults = document.getElementById('noResults');
+
+            function applyFilter(filter) {
+                let visible = 0;
+
+                allCards.forEach(card => {
+                    const cats = card.getAttribute('data-category') || '';
+                    const show = filter === 'all' || cats.split(' ').includes(filter);
+
+                    if (show) {
+                        visible++;
+                        gsap.to(card, {
+                            opacity: 1, scale: 1, duration: 0.35, ease: 'power2.out',
+                            onStart: () => { card.style.display = 'flex'; }
+                        });
+                    } else {
+                        gsap.to(card, {
+                            opacity: 0, scale: 0.95, duration: 0.25, ease: 'power2.in',
+                            onComplete: () => { card.style.display = 'none'; }
+                        });
+                    }
+                });
+
+                countEl.textContent = visible;
+                noResults.classList.toggle('visible', visible === 0);
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter(btn.getAttribute('data-filter'));
+                });
+            });
+
+            // ── Back to top ────────────────────────────────────────
+            document.getElementById('backToTopProjects').addEventListener('click', () => {
+                lenis.scrollTo(0, { duration: 1.5 });
+            });
+
+            ScrollTrigger.refresh();
+        });
+    </script>
+
+</body>
+
+</html>

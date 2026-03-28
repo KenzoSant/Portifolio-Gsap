@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fullscreen Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">KENZO<span>.S</span></div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loader-text">Carregando Experiência... <span class="counter">0%</span></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">KENZO<span>.S</span></a>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#contact" class="nav-btn">Contato</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main ContentWrapper for smooth scroll -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero">
+                <div class="hero-bg">
+                    <!-- Placeholder video from Pexels, replace if needed -->
+                    <video autoplay muted loop playsinline id="bg-video">
+                        <source src="./images/video.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content main-container">
+                    <p class="hero-subtitle">Elevando o padrão na web</p>
+                    <h1 class="hero-title">
+                        Desenvolvedor<br>
+                        <span class="text-gradient">Front-end</span><br>
+
+                    </h1>
+                    <p class="hero-desc">Criando experiências digitais memoráveis com design moderno, animações fluidas
+                        e performance incomparável.</p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary magnetic-btn">
+                            <span class="btn-text">Ver Projetos</span>
+                            <i class="ph ph-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="btn-bracket magnetic-btn">
+                            <span class="btn-text">Descobrir Mais</span>
+                        </a>
+                        <div class="scroll-indicator">
+                            <i class="ph ph-mouse-simple"></i>
+                            <span>Scroll</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="section services section-dark">
+                <!-- Background growth -->
+                <div class="services-bg-grow"></div>
+
+                <div class="main-container relative-z">
+                    <div class="services-header-split difference-text">
+                        <div class="services-header-left">
+                            <p class="section-subtitle">Meu Ethos</p>
+                            <h2 class="section-title">A VISÃO IMPORTA.</h2>
+                            <div class="title-underline"></div>
+                        </div>
+                        <div class="services-header-right">
+                            <p class="services-desc">Elevando o patamar do seu projeto com infraestrutura sólida e
+                                visual impecável. Construo interfaces completas, no ritmo que o mercado moderno exige.
+                            </p>
+                            <a href="#contact" class="btn-bracket magnetic-btn">
+                                <span class="btn-text">Contato</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="services-cards-row">
+                        <div class="service-card-ethos color-dark">
+                            <h3 class="ethos-title">CÓDIGO<br>EXPONENCIAL</h3>
+                            <div class="ethos-bottom">
+                                <span class="ethos-num">01</span>
+                                <p class="ethos-desc">ARQUITETURA DE FRONT-END ESCALÁVEL, DESENHADA PARA CRESCER JUNTO
+                                    COM SEU NEGÓCIO SEM ACÚMULO DE DÉBITO TÉCNICO.</p>
+                            </div>
+                            <div class="ethos-pattern pattern-dots"></div>
+                        </div>
+                        <div class="service-card-ethos color-blue">
+                            <h3 class="ethos-title">SUPORTE<br>FULL-STACK</h3>
+                            <div class="ethos-bottom">
+                                <span class="ethos-num">02</span>
+                                <p class="ethos-desc">INTEGRAÇÃO FLUIDA ENTRE DESIGN E LÓGICA DE SERVIDOR, GARANTINDO
+                                    QUE O VISUAL INCRÍVEL SEJA SUPORTADO POR DADOS RÁPIDOS.</p>
+                            </div>
+                            <div class="ethos-pattern pattern-waves"></div>
+                        </div>
+                        <div class="service-card-ethos color-orange">
+                            <h3 class="ethos-title">DESIGN<br>RESPONSIVO</h3>
+                            <div class="ethos-bottom">
+                                <span class="ethos-num">03</span>
+                                <p class="ethos-desc">EXPERIÊNCIA MOBILE-FIRST IMPECÁVEL. ADAPTABILIDADE NÃO É UMA
+                                    FEATURE EXTRA, É A FUNDAÇÃO DO NOSSO TRABALHO.</p>
+                            </div>
+                            <div class="ethos-pattern pattern-rays"></div>
+                        </div>
+                        <div class="service-card-ethos color-light">
+                            <h3 class="ethos-title">ITERAÇÃO<br>INTELIGENTE</h3>
+                            <div class="ethos-bottom">
+                                <span class="ethos-num">04</span>
+                                <p class="ethos-desc">PROCESSOS ÁGEIS FOCADOS EM FEEDBACK E DADOS DE USUÁRIO, POLINDO
+                                    MICRO-INTERAÇÕES A CADA CICLO DE DEPLOY.</p>
+                            </div>
+                            <div class="ethos-pattern pattern-curves"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section projects section-dark">
+                <div class="main-container">
+                    <div class="section-header center">
+                        <p class="section-subtitle">Meu Trabalho</p>
+                        <h2 class="section-title">Projetos em <span>Destaque</span></h2>
+                        <div class="title-underline center"></div>
+                    </div>
+
+                    <div class="projects-wrapper">
+                        <!-- Project 1 -->
+                        <div class="project-item group-right">
+                            <div class="project-image parallax-img">
+                                <img src="./images/sytudio.png" alt="Projeto 1">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">E-commerce Premium</h3>
+                                <div class="project-tags">
+                                    <span>React</span>
+                                    <span>HTML</span>
+                                    <span>MONGO DB</span>
+                                </div>
+                                <p class="project-desc">Uma plataforma de e-commerce de alto padrão com transições de
+                                    páginas suaves, filtro interativo 3D e checkout otimizado.</p>
+                                <a href="https://sytudio.onrender.com/" class="btn btn-outline magnetic-btn">
+                                    <span class="btn-text">Ver site</span>
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-item group-left">
+                            <div class="project-content">
+                                <h3 class="project-title">E-commerce Premium</h3>
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Js</span>
+                                </div>
+                                <p class="project-desc">Interface complexa de visualização de dados com gráficos
+                                    animados em tempo real, painéis customizáveis e modo noturno.</p>
+                                <a href="https://natalina.vercel.app/" class="btn btn-outline magnetic-btn">
+                                    <span class="btn-text">Ver site</span>
+                                    <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <div class="project-image parallax-img">
+                                <img src="./images/natal.png" alt="Projeto 2">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA para página de projetos -->
+                    <div class="projects-cta">
+                        <a href="projects.html" class="btn btn-primary magnetic-btn" id="allProjectsBtn">
+                            <span class="btn-text">Ver Mais Projetos</span>
+                            <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION - VERSÃO ATUALIZADA -->
+            <section id="skills" class="section skills section-dark">
+                <div class="main-container skills-container">
+                    <div class="skills-left">
+                        <div class="skills-pinned-content">
+                            <p class="section-subtitle">Minhas Ferramentas</p>
+                            <h2 class="section-title">Tecnologias <span>& Linguagens</span></h2>
+                            <p class="skills-desc">O stack tecnológico perfeito para construir soluções robustas,
+                                escaláveis e esteticamente apuradas.</p>
+                        </div>
+                    </div>
+                    <div class="skills-right">                       
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="ph ph-file-html"></i></div>
+                            <div class="skill-info">
+                                <h3>HTML5 & CSS3</h3>
+                                <p>Semântica perfeita e estilos modernos com flexbox, grid e animações nativas. Domínio
+                                    total de técnicas de layout responsivo e acessibilidade web.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="ph ph-file-js"></i></div>
+                            <div class="skill-info">
+                                <h3>JavaScript (ES6+)</h3>
+                                <p>Ecossistema moderno, assincronicidade, manipulação avançada de DOM. Experiência com
+                                    programação funcional, promises, async/await e clean code.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="ph ph-atom"></i></div>
+                            <div class="skill-info">
+                                <h3>React & Vue.js</h3>
+                                <p>Componentização de interfaces complexas e SPA de alta performance. Gerenciamento de
+                                    estado com Redux, Vuex e Context API. Otimização de renderização.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="ph ph-magic-wand"></i></div>
+                            <div class="skill-info">
+                                <h3>GSAP & Framer</h3>
+                                <p>Animações fluidas, controle de timeline e ScrollTrigger para impacto visual. Criação
+                                    de experiências imersivas e micro-interações refinadas.</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section about section-light">
+                <div class="main-container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p class="section-subtitle">Sobre a trajetória</p>
+                            <h2 class="section-title">Design que <span>funciona</span></h2>
+                            <p class="about-desc">
+                                Com mais de 6 anos de experiência esculpindo pixels e escrevendo lógica, minha missão é
+                                unir estética de alto nível a um código performático e acessível.
+                            </p>
+                            <p class="about-desc">
+                                Acredito que a verdadeira arte na web mora nas micro-interações: aquele botão que
+                                responde perfeitamente ao hover e a transição invisível que não quebra a imersão do
+                                usuário.
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stat-item">
+                                    <h4 class="stat-number"><span class="counter-num" data-target="95">0</span>%</h4>
+                                    <p class="stat-label">Performance Core Web Vitals</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h4 class="stat-number"><span class="counter-num" data-target="20">0</span>+</h4>
+                                    <p class="stat-label">Projetos Entregues</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-visual">
+                            <div class="image-stack">
+                                <img src="./images/tokashiki.png"
+                                    alt="Trabalhando" class="img-back">
+                                <img src="./images/homed.png"
+                                    alt="Código" class="img-front">
+                                <div class="floating-badge">
+                                    <i class="ph ph-medal"></i>
+                                    <span>Desenvolvedor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact section-dark">
+                <div class="main-container">
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <div class="section-header">
+                                <p class="section-subtitle">Vamos conversar?</p>
+                                <h2 class="section-title">Inicie o seu<br><span>próximo projeto</span></h2>
+                            </div>
+                            <p class="contact-desc">Estou sempre aberto a discutir desenvolvimento de produtos, novos
+                                projetos ou oportunidades criativas.</p>
+
+                            <div class="contact-details">
+                                <a href="mailto:mateuskenzo_santos@hotmail.com" class="contact-link">
+                                    <div class="icon-circle"><i class="ph ph-envelope-simple"></i></div>
+                                    <div class="link-text">
+                                        <span>Me mande um email</span>
+                                        <strong>mateuskenzo_santos@hotmail.com</strong>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mateuskenzo" class="contact-link" target="_blank">
+                                    <div class="icon-circle"><i class="ph ph-linkedin-logo"></i></div>
+                                    <div class="link-text">
+                                        <span>Conecte-se</span>
+                                        <strong>LinkedIn</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-container">
+                            <form class="contact-form" id="contactForm">
+                                <div class="input-group">
+                                    <input type="text" id="name" required placeholder=" ">
+                                    <label for="name">Seu Nome</label>
+                                    <div class="input-line"></div>
+                                </div>
+                                <div class="input-group">
+                                    <input type="email" id="email" required placeholder=" ">
+                                    <label for="email">Seu Email</label>
+                                    <div class="input-line"></div>
+                                </div>
+                                <div class="input-group textarea-group">
+                                    <textarea id="message" rows="4" required placeholder=" "></textarea>
+                                    <label for="message">Sobre o projeto (detalhes, orçamento...)</label>
+                                    <div class="input-line"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary submit-btn magnetic-btn">
+                                    <span class="btn-text">Enviar Mensagem</span>
+                                    <i class="ph ph-paper-plane-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="main-container">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <a href="#hero" class="logo">KENZO<span>.S</span></a>
+                            <p>Tornando a web incrível,<br>um pixel de cada vez.</p>
+                        </div>
+                        <div class="footer-links">
+                            <div class="link-col">
+                                <h4>Navegação</h4>
+                                <ul>
+                                    <li><a href="#services" class="hover-underline">Serviços</a></li>
+                                    <li><a href="#projects" class="hover-underline">Projetos</a></li>
+                                    <li><a href="#skills" class="hover-underline">Skills</a></li>
+                                    <li><a href="#about" class="hover-underline">Sobre Mim</a></li>
+                                </ul>
+                            </div>
+                            <div class="link-col">
+                                <h4>Social</h4>
+                                <ul>
+                                    <li><a href="https://github.com/KenzoSant" class="hover-underline" target="_blank">GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 KENZO.S. Todos os direitos reservados.</p>
+                        <button class="back-to-top" id="backToTop">
+                            <i class="ph ph-caret-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Scripts CDN -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- SplitType (Free alternative for SplitText) -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

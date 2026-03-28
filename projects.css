@@ -1,0 +1,440 @@
+/* =========================================================
+   PROJECTS PAGE — Specific Styles
+   ========================================================= */
+
+/* Page Hero */
+.page-hero {
+    padding: calc(var(--nav-height) + 6rem) 0 5rem;
+    background-color: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 37, 73, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.page-hero-left .page-title {
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.page-hero-left .page-title span {
+    color: var(--accent-color);
+}
+
+.page-hero-right {
+    max-width: 380px;
+}
+
+.page-hero-right p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.projects-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.projects-count span {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+}
+
+/* Filter Bar */
+.filter-bar {
+    padding: 2rem 0 3rem;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.filter-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--font-body);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.filter-btn.active {
+    background: var(--text-primary);
+    color: #fff;
+    border-color: var(--text-primary);
+}
+
+/* Projects Grid */
+.projects-page-section {
+    padding: 5rem 0 8rem;
+    background-color: var(--bg-dark);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
+
+/* Card Base */
+.pcard {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.pcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Sizes — Bento-style grid */
+.pcard--wide {
+    grid-column: span 7;
+}
+
+.pcard--narrow {
+    grid-column: span 5;
+}
+
+.pcard--half {
+    grid-column: span 6;
+}
+
+.pcard--third {
+    grid-column: span 4;
+}
+
+.pcard--full {
+    grid-column: span 12;
+}
+
+/* Card Image */
+.pcard-image {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.pcard--wide .pcard-image,
+.pcard--narrow .pcard-image {
+    height: 280px;
+}
+
+.pcard--half .pcard-image {
+    height: 240px;
+}
+
+.pcard--third .pcard-image {
+    height: 200px;
+}
+
+.pcard--full .pcard-image {
+    height: 340px;
+}
+
+.pcard-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pcard:hover .pcard-image img {
+    transform: scale(1.05);
+}
+
+.pcard-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.25) 100%);
+    transition: opacity 0.4s ease;
+}
+
+/* Card Badge */
+.pcard-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+}
+
+.pcard-badge.accent {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* Card Link button (top-right) */
+.pcard-link-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--text-primary);
+    opacity: 0;
+    transform: scale(0.7) rotate(-45deg);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+}
+
+.pcard:hover .pcard-link-btn {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Card Body */
+.pcard-body {
+    padding: 1.75rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pcard-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.85rem;
+}
+
+.pcard-tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.pcard-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 0.6rem;
+    color: var(--text-primary);
+}
+
+.pcard-desc {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.pcard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pcard-year {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.pcard-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    transition: gap 0.25s ease;
+}
+
+.pcard-cta:hover {
+    gap: 0.7rem;
+}
+
+.pcard-cta i {
+    font-size: 1rem;
+}
+
+/* Featured card (dark) */
+.pcard--featured {
+    background: #111111;
+    color: #fff;
+}
+
+.pcard--featured .pcard-title {
+    color: #fff;
+}
+
+.pcard--featured .pcard-desc {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pcard--featured .pcard-tag {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.pcard--featured .pcard-year {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.pcard--featured .pcard-cta {
+    color: #FF6B6B;
+}
+
+.pcard--featured .pcard-footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Empty state */
+.no-results {
+    grid-column: span 12;
+    text-align: center;
+    padding: 5rem 0;
+    display: none;
+}
+
+.no-results.visible {
+    display: block;
+}
+
+.no-results i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.no-results p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2.5rem;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+    gap: 0.75rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .pcard--wide,
+    .pcard--narrow {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .pcard--wide,
+    .pcard--narrow,
+    .pcard--half,
+    .pcard--third,
+    .pcard--full {
+        grid-column: span 12;
+    }
+
+    .page-hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-bar {
+        position: relative;
+        top: 0;
+    }
+}
