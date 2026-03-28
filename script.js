@@ -579,49 +579,47 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.refresh();
 });
 
-// =================== EMAILJS - CONTATO ===================
-(function () {
-    emailjs.init("6ieuhHqd1xQ9ojY2q");
-})();
+/// ================= EMAILJS =================
+ emailjs.init("6ieuhHqd1xQ9ojY2q");
 
-const contactForm = document.getElementById('contactForm');
-const successNotification = document.getElementById('successNotification');
+const form = document.getElementById("contactForm");
+const notification = document.getElementById("successNotification");
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const formData = {
-            from_name: document.getElementById('name').value,
-            from_email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
-            to_name: 'Kenzo Santos'
-        };
+    const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+        time: new Date().toLocaleString(),
+        to_name: "Kenzo Santos"
+    };
 
-        emailjs.send('service_l4jftwt', 'template_zy7nmkk', formData)
-            .then(function (response) {
-                // Exibe notificação de sucesso
-                if (successNotification) {
-                    successNotification.style.display = 'flex';
-                    gsap.fromTo(successNotification,
-                        { y: -100, opacity: 0 },
-                        { y: 0, opacity: 1, duration: 0.5, ease: 'back.out(1.2)' }
-                    );
-                    setTimeout(() => {
-                        gsap.to(successNotification, {
-                            y: -100,
-                            opacity: 0,
-                            duration: 0.3,
-                            ease: 'power2.in',
-                            onComplete: () => {
-                                successNotification.style.display = 'none';
-                            }
-                        });
-                    }, 3000);
-                }
-                contactForm.reset();
-            }, function (error) {
-                alert('Erro ao enviar email. Tente novamente.');
-            });
-    });
-}
+    emailjs.send("service_l4jftwt", "template_zy7nmkk", data)
+        .then(() => {
+
+            notification.style.display = "block";
+
+            gsap.fromTo(notification,
+                { y: -40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.4 }
+            );
+
+            setTimeout(() => {
+                gsap.to(notification, {
+                    y: -40,
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: () => notification.style.display = "none"
+                });
+            }, 3000);
+
+            form.reset();
+
+        })
+        .catch((err) => {
+            console.error(err);
+            alert("Erro ao enviar email");
+        });
+});

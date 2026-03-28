@@ -608,6 +608,43 @@ html.lenis {
 }
 
 /* ==========================================================================
+   Success Notification
+   ========================================================================== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-content {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.notification-content i {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .notification {
+        left: 20px;
+        right: 20px;
+    }
+}
+
+/* ==========================================================================
    Services Section (Ethos Style)
    ========================================================================== */
 .services.section-dark {

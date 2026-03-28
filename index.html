@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+</head>
+
 <body>
 
     <!-- Fullscreen Loader -->
@@ -232,7 +235,7 @@
                                 escaláveis e esteticamente apuradas.</p>
                         </div>
                     </div>
-                    <div class="skills-right">                       
+                    <div class="skills-right">
                         <div class="skill-item">
                             <div class="skill-icon"><i class="ph ph-file-html"></i></div>
                             <div class="skill-info">
@@ -264,7 +267,7 @@
                                 <p>Animações fluidas, controle de timeline e ScrollTrigger para impacto visual. Criação
                                     de experiências imersivas e micro-interações refinadas.</p>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -299,10 +302,8 @@
                         </div>
                         <div class="about-visual">
                             <div class="image-stack">
-                                <img src="./images/tokashiki.png"
-                                    alt="Trabalhando" class="img-back">
-                                <img src="./images/homed.png"
-                                    alt="Código" class="img-front">
+                                <img src="./images/tokashiki.png" alt="Trabalhando" class="img-back">
+                                <img src="./images/homed.png" alt="Código" class="img-front">
                                 <div class="floating-badge">
                                     <i class="ph ph-medal"></i>
                                     <span>Desenvolvedor</span>
@@ -345,65 +346,86 @@
 
                         <div class="contact-form-container">
                             <form class="contact-form" id="contactForm">
+
                                 <div class="input-group">
-                                    <input type="text" id="name" required placeholder=" ">
+                                    <input type="text" id="name" name="name" required placeholder=" ">
                                     <label for="name">Seu Nome</label>
                                     <div class="input-line"></div>
                                 </div>
+
                                 <div class="input-group">
-                                    <input type="email" id="email" required placeholder=" ">
+                                    <input type="email" id="email" name="email" required placeholder=" ">
                                     <label for="email">Seu Email</label>
                                     <div class="input-line"></div>
                                 </div>
+
                                 <div class="input-group textarea-group">
-                                    <textarea id="message" rows="4" required placeholder=" "></textarea>
+                                    <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
                                     <label for="message">Sobre o projeto (detalhes, orçamento...)</label>
                                     <div class="input-line"></div>
                                 </div>
+
                                 <button type="submit" class="btn btn-primary submit-btn magnetic-btn">
                                     <span class="btn-text">Enviar Mensagem</span>
                                     <i class="ph ph-paper-plane-right"></i>
                                 </button>
+
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Notificação de sucesso do envio de email -->
+            <div class="notification" id="successNotification" style="display:none">
+                <div class="notification-content">
+                    <i class="ph ph-check-circle"></i>
+                    <span>Email enviado com sucesso!</span>
+                </div>
+            </div>
+
             <!-- Footer -->
             <footer class="footer">
-                <div class="main-container">
-                    <div class="footer-top">
-                        <div class="footer-brand">
-                            <a href="#hero" class="logo">KENZO<span>.S</span></a>
-                            <p>Tornando a web incrível,<br>um pixel de cada vez.</p>
-                        </div>
-                        <div class="footer-links">
-                            <div class="link-col">
-                                <h4>Navegação</h4>
-                                <ul>
-                                    <li><a href="#services" class="hover-underline">Serviços</a></li>
-                                    <li><a href="#projects" class="hover-underline">Projetos</a></li>
-                                    <li><a href="#skills" class="hover-underline">Skills</a></li>
-                                    <li><a href="#about" class="hover-underline">Sobre Mim</a></li>
-                                </ul>
-                            </div>
-                            <div class="link-col">
-                                <h4>Social</h4>
-                                <ul>
-                                    <li><a href="https://github.com/KenzoSant" class="hover-underline" target="_blank">GitHub</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="main-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="#hero" class="logo">KENZO<span>.S</span></a>
+                        <p>Tornando a web incrível,<br>um pixel de cada vez.</p>
                     </div>
-                    <div class="footer-bottom">
-                        <p>&copy; 2026 KENZO.S. Todos os direitos reservados.</p>
-                        <button class="back-to-top" id="backToTop">
-                            <i class="ph ph-caret-up"></i>
-                        </button>
+                    <div class="footer-links">
+                        <div class="link-col">
+                            <h4>Navegação</h4>
+                            <ul>
+                                <li><a href="#services" class="hover-underline">Serviços</a></li>
+                                <li><a href="#projects" class="hover-underline">Projetos</a></li>
+                                <li><a href="#skills" class="hover-underline">Skills</a></li>
+                                <li><a href="#about" class="hover-underline">Sobre Mim</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-col">
+                            <h4>Social</h4>
+                            <ul>
+                                <li><a href="https://github.com/KenzoSant" class="hover-underline"
+                                        target="_blank">GitHub</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </footer>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 KENZO.S. Todos os direitos reservados.</p>
+                    <button class="back-to-top" id="backToTop">
+                        <i class="ph ph-caret-up"></i>
+                    </button>
+                </div>
+            </div>
+        </footer>
         </div>
     </main>
 
@@ -416,6 +438,8 @@
     <script src="https://unpkg.com/split-type"></script>
     <!-- Lenis for Smooth Scroll -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
