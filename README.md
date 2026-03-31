@@ -1,5 +1,8 @@
 # 🚀 Kenzo Santos - Front-End Developer Portfolio
 
+<img width="1896" height="1079" alt="Captura de tela 2026-03-31 122915" src="https://github.com/user-attachments/assets/21bf95e6-4eea-4c0d-a190-ccfa869c06f5" />
+
+
 > Um portfólio premium desenvolvido com tecnologias modernas, animações fluidas e design imersivo.
 
 ## ✨ Sobre o Projeto
