@@ -7,6 +7,67 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // ---------------------------------------------------------
+    // 0. Mobile Menu Toggle
+    // ---------------------------------------------------------
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-link, .nav-btn');
+
+    if (menuToggle && navLinks) {
+        console.log('Menu toggle and nav links found');
+        // Toggle menu on button click
+        menuToggle.addEventListener('click', () => {
+            console.log('Menu toggle clicked');
+            console.log('Before toggle - menuToggle classes:', menuToggle.classList.toString());
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            console.log('After toggle - menuToggle classes:', menuToggle.classList.toString());
+
+            // Add/remove class to navbar for styling
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                navbar.classList.toggle('menu-active');
+            }
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking on a link
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Remove class from navbar
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    navbar.classList.remove('menu-active');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+
+                // Remove class from navbar
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    navbar.classList.remove('menu-active');
+                }
+            }
+        });
+    }
+
+
+    // ---------------------------------------------------------
     // 1. Core Setup & Registration
     // ---------------------------------------------------------
     gsap.registerPlugin(ScrollTrigger);
@@ -350,6 +411,66 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
+        // Mobile effects for tablets and phones
+        mm.add("(max-width: 900px)", () => {
+            // Stagger animation for skill items on mobile
+            gsap.fromTo(skillItems,
+                { opacity: 0, y: 50, scale: 0.95 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    stagger: 0.15,
+                    duration: 0.8,
+                    ease: "back.out(1.2)",
+                    scrollTrigger: {
+                        trigger: ".skills-container",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+
+            // Simple fade-in for left content
+            const skillsLeft = document.querySelector('.skills-left');
+            if (skillsLeft) {
+                gsap.fromTo(skillsLeft,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: skillsLeft,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            }
+
+            // Subtle hover effect for mobile (touch)
+            skillItems.forEach(item => {
+                item.addEventListener('touchstart', () => {
+                    gsap.to(item, {
+                        scale: 1.02,
+                        duration: 0.2,
+                        ease: "power2.out"
+                    });
+                });
+
+                item.addEventListener('touchend', () => {
+                    gsap.to(item, {
+                        scale: 1,
+                        duration: 0.2,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+
         // Update dots on scroll
         lenis.on('scroll', () => {
             updateActiveDot();
@@ -370,8 +491,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const rect = card.getBoundingClientRect();
 
             // Atualiza posição do spotlight via CSS custom properties
-            const pctX = ((e.clientX - rect.left) / rect.width)  * 100;
-            const pctY = ((e.clientY - rect.top)  / rect.height) * 100;
+            const pctX = ((e.clientX - rect.left) / rect.width) * 100;
+            const pctY = ((e.clientY - rect.top) / rect.height) * 100;
             card.style.setProperty('--mouse-x', `${pctX}%`);
             card.style.setProperty('--mouse-y', `${pctY}%`);
         });
@@ -580,7 +701,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /// ================= EMAILJS =================
- emailjs.init("6ieuhHqd1xQ9ojY2q");
+emailjs.init("6ieuhHqd1xQ9ojY2q");
 
 const form = document.getElementById("contactForm");
 const notification = document.getElementById("successNotification");
@@ -623,3 +744,4 @@ form.addEventListener("submit", function (e) {
             alert("Erro ao enviar email");
         });
 });
+

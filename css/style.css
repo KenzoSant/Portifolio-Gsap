@@ -336,6 +336,11 @@ html.lenis {
     color: #ffffff;
 }
 
+.navbar.menu-active .logo,
+.navbar.menu-active .menu-toggle {
+    color: #ffffff;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -382,6 +387,11 @@ html.lenis {
     display: none;
     font-size: 1.5rem;
     color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    transition: all var(--transition-fast);
     z-index: 1001;
 }
 
@@ -889,7 +899,7 @@ html.lenis {
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    gap: 50vh;
+    gap: 15vh;
     position: relative;
     perspective: 1200px;
 }
@@ -1060,13 +1070,13 @@ html.lenis {
 @media (max-width: 1024px) {
     .skills-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
     
     .skills-left {
         position: relative;
         top: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-align: center;
     }
     
@@ -1075,11 +1085,22 @@ html.lenis {
     }
     
     .skill-item {
-        min-height: 70vh;
-        padding: 2rem;
+        min-height: auto;
+        padding: 1.5rem;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all var(--transition-normal);
+    }
+    
+    .skill-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--accent-color);
     }
     
     .skill-info p {
@@ -1089,11 +1110,26 @@ html.lenis {
     .skills-progress {
         display: none;
     }
+    
+    .skill-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .skill-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-item p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
 }
 
 @media (max-width: 768px) {
     .skill-item {
-        min-height: 60vh;
+        min-height: 45vh;
         padding: 1.5rem;
     }
     
@@ -1580,11 +1616,69 @@ html.lenis {
     }
     
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-link, .nav-btn {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    
+    .nav-btn {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+        padding: 0.75rem 2rem;
     }
     
     .menu-toggle {
         display: block;
+        position: relative;
+        z-index: 1000;
+        color: var(--text-primary);
+        transition: color var(--transition-fast);
+    }
+    
+    .menu-toggle.active {
+        color: #ffffff;
+    }
+    
+    .menu-toggle.active .ph-list {
+        display: none;
+    }
+    
+    .menu-toggle.active .ph-x {
+        display: block !important;
+        color: #ffffff !important;
+        font-size: 1.5rem !important;
+    }
+    
+    /* Fallback - se o ícone Phosphor não carregar */
+    .menu-toggle.active .ph-x:before {
+        content: '×' !important;
+        font-family: monospace !important;
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
     }
     
     .hero-title {
