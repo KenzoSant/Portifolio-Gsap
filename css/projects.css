@@ -126,8 +126,9 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 1.5rem;
+    transition: all 0.4s ease;
 }
 
 /* Card Base */
@@ -149,26 +150,7 @@
     box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
 }
 
-/* Card Sizes — Bento-style grid */
-.pcard--wide {
-    grid-column: span 7;
-}
-
-.pcard--narrow {
-    grid-column: span 5;
-}
-
-.pcard--half {
-    grid-column: span 6;
-}
-
-.pcard--third {
-    grid-column: span 4;
-}
-
-.pcard--full {
-    grid-column: span 12;
-}
+/* Card Sizes — Bento-style grid explicitly removed to maintain dynamic layouts */
 
 /* Card Image */
 .pcard-image {
@@ -177,21 +159,8 @@
     flex-shrink: 0;
 }
 
-.pcard--wide .pcard-image,
-.pcard--narrow .pcard-image {
-    height: 280px;
-}
-
-.pcard--half .pcard-image {
+.pcard-image {
     height: 240px;
-}
-
-.pcard--third .pcard-image {
-    height: 200px;
-}
-
-.pcard--full .pcard-image {
-    height: 340px;
 }
 
 .pcard-image img {
@@ -367,7 +336,7 @@
 
 /* Empty state */
 .no-results {
-    grid-column: span 12;
+    grid-column: 1 / -1;
     text-align: center;
     padding: 5rem 0;
     display: none;
@@ -413,20 +382,9 @@
    Responsive
    ========================================================================== */
 @media (max-width: 1024px) {
-    .pcard--wide,
-    .pcard--narrow {
-        grid-column: span 6;
-    }
 }
 
 @media (max-width: 768px) {
-    .pcard--wide,
-    .pcard--narrow,
-    .pcard--half,
-    .pcard--third,
-    .pcard--full {
-        grid-column: span 12;
-    }
 
     .page-hero-inner {
         flex-direction: column;
