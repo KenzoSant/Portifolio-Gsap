@@ -70,7 +70,7 @@
                             <p>Uma coleção de trabalhos desenvolvidos com foco em performance, design afiado e
                                 experiências que ficam na memória do usuário.</p>
                             <div class="projects-count">
-                                <span id="visibleCount">7</span>&nbsp;projetos encontrados
+                                <span id="visibleCount">9</span>&nbsp;projetos encontrados
                             </div>
                         </div>
                     </div>
@@ -469,6 +469,8 @@
             const countEl = document.getElementById('visibleCount');
             const noResults = document.getElementById('noResults');
             const projectsGrid = document.getElementById('projectsGrid');
+
+            countEl.textContent = allCards.length;
 
             function applyFilter(filter) {
                 let visibleCards = [];
